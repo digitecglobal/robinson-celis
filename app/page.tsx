@@ -77,6 +77,33 @@ const techHighlights = [
   "Soporte especializado",
 ];
 
+const galleryItems = [
+  {
+    src: "/media/unsplash-control-room.jpg",
+    alt: "Centro de control con pantallas y monitoreo",
+  },
+  {
+    src: "/media/unsplash-conference-room.jpg",
+    alt: "Sala de juntas moderna con pantalla principal",
+  },
+  {
+    src: "/media/pexels-server-rack.jpg",
+    alt: "Racks de servidores en data center",
+  },
+  {
+    src: "/media/unsplash-av-rack.jpg",
+    alt: "Rack audiovisual con equipos profesionales",
+  },
+  {
+    src: "/media/pexels-fiber-cables.jpg",
+    alt: "Conectividad y cableado estructurado",
+  },
+  {
+    src: "/media/pexels-data-center-console.jpg",
+    alt: "Estación técnica para gestión de infraestructura",
+  },
+];
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -193,10 +220,10 @@ export default function Home() {
           <div className="grid gap-4">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/60">
               <Image
-                src="/media/conference-room.jpg"
-                alt="Sala de conferencia con soluciones audiovisuales"
+                src="/media/unsplash-video-conference.jpg"
+                alt="Videoconferencia en pantalla principal"
                 width={1600}
-                height={1000}
+                height={900}
                 className="h-full w-full object-cover"
                 priority
               />
@@ -287,6 +314,41 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="grid gap-8">
+          <div className="grid gap-3">
+            <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
+              Galería
+            </p>
+            <h2 className="font-display text-3xl">
+              Tecnología corporativa en acción
+            </h2>
+            <p className="max-w-2xl text-ice-200">
+              Integración AV, conectividad y entornos colaborativos para empresas
+              que buscan soluciones confiables y escalables.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {galleryItems.map((item) => (
+              <div
+                key={item.src}
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/70"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={1600}
+                  height={1000}
+                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <div className="absolute bottom-3 left-4 right-4 text-sm text-ice-100 opacity-0 transition duration-500 group-hover:opacity-100">
+                  {item.alt}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section id="servicios" className="grid gap-8">
           <div className="grid gap-3">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
@@ -316,10 +378,10 @@ export default function Home() {
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/60">
             <Image
-              src="/media/meeting-room.jpg"
-              alt="Reunión con soluciones audiovisuales colaborativas"
-              width={1800}
-              height={1200}
+              src="/media/unsplash-control-room.jpg"
+              alt="Centro de control con múltiples pantallas"
+              width={1600}
+              height={900}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
