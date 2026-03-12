@@ -79,28 +79,28 @@ const techHighlights = [
 
 const galleryItems = [
   {
-    src: "/media/unsplash-control-room.jpg",
-    alt: "Centro de control con pantallas y monitoreo",
+    src: "/media/gallery-audio-rack.jpg",
+    alt: "Rack de audio y procesamiento con equipos profesionales",
   },
   {
-    src: "/media/unsplash-conference-room.jpg",
-    alt: "Sala de juntas moderna con pantalla principal",
+    src: "/media/gallery-cables.jpg",
+    alt: "Conectividad y cableado estructurado para AV",
   },
   {
-    src: "/media/pexels-server-rack.jpg",
-    alt: "Racks de servidores en data center",
+    src: "/media/gallery-control-room.jpg",
+    alt: "Centro de control con videowall y monitoreo",
   },
   {
-    src: "/media/unsplash-av-rack.jpg",
-    alt: "Rack audiovisual con equipos profesionales",
+    src: "/media/gallery-conference-city.jpg",
+    alt: "Sala corporativa con pantalla y vista panorámica",
   },
   {
-    src: "/media/pexels-fiber-cables.jpg",
-    alt: "Conectividad y cableado estructurado",
+    src: "/media/gallery-video-conference.jpg",
+    alt: "Sala de videoconferencia con display principal",
   },
   {
-    src: "/media/pexels-data-center-console.jpg",
-    alt: "Estación técnica para gestión de infraestructura",
+    src: "/media/gallery-projector.jpg",
+    alt: "Espacio de presentación con proyección y audio",
   },
 ];
 
@@ -220,10 +220,11 @@ export default function Home() {
           <div className="grid gap-4">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/60">
               <Image
-                src="/media/unsplash-video-conference.jpg"
-                alt="Videoconferencia en pantalla principal"
+                src="/media/hero-conference.jpg"
+                alt="Sala corporativa con pantallas AV integradas"
                 width={1600}
                 height={900}
+                sizes="(min-width: 1024px) 40vw, 100vw"
                 className="h-full w-full object-cover"
                 priority
               />
@@ -338,6 +339,7 @@ export default function Home() {
                   alt={item.alt}
                   width={1600}
                   height={1000}
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
@@ -378,10 +380,11 @@ export default function Home() {
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/60">
             <Image
-              src="/media/unsplash-control-room.jpg"
-              alt="Centro de control con múltiples pantallas"
+              src="/media/tech-microphones.jpg"
+              alt="Mesa de conferencia con audio profesional y pantallas"
               width={1600}
               height={900}
+              sizes="(min-width: 1024px) 45vw, 100vw"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
