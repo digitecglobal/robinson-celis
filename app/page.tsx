@@ -70,6 +70,13 @@ const values = [
   "Respeto",
 ];
 
+const techHighlights = [
+  "Salas híbridas y colaborativas",
+  "Integración AV end-to-end",
+  "Gestión de señal y control",
+  "Soporte especializado",
+];
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -183,52 +190,69 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-4 rounded-3xl border border-white/10 bg-ink-900/75 p-6 shadow-[0_40px_120px_rgba(8,14,36,0.6)]">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
-                Contacto directo
-              </p>
-              <p className="font-display text-xl">VIDEONET</p>
+          <div className="grid gap-4">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/60">
+              <Image
+                src="/media/conference-room.jpg"
+                alt="Sala de conferencia con soluciones audiovisuales"
+                width={1600}
+                height={1000}
+                className="h-full w-full object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-sm text-ice-100">
+                Espacios conectados para colaboración y productividad.
+              </div>
             </div>
-            <div className="grid gap-3 text-sm text-ice-200">
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>Correo</span>
-                <a
-                  href="mailto:ventas6@videonetcali.com"
-                  className="text-ice-100 hover:text-brand-300"
-                >
-                  ventas6@videonetcali.com
-                </a>
+
+            <div className="grid gap-4 rounded-3xl border border-white/10 bg-ink-900/75 p-6 shadow-[0_40px_120px_rgba(8,14,36,0.6)]">
+              <div>
+                <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
+                  Contacto directo
+                </p>
+                <p className="font-display text-xl">VIDEONET</p>
               </div>
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>Celular / WhatsApp</span>
-                <a
-                  href="tel:+573173040506"
-                  className="text-ice-100 hover:text-brand-300"
-                >
-                  +57 317 304 0506
-                </a>
-              </div>
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>Teléfono</span>
-                <span className="text-ice-100">
-                  265 5944 Extensión Fija: 127 - Extensión Móvil: 227
-                </span>
-              </div>
-              <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>Ciudad</span>
-                <span className="text-ice-100">Bogotá, Colombia</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span>Web</span>
-                <a
-                  href="https://www.videonetcali.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-ice-100 hover:text-brand-300"
-                >
-                  www.videonetcali.com
-                </a>
+              <div className="grid gap-3 text-sm text-ice-200">
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>Correo</span>
+                  <a
+                    href="mailto:ventas6@videonetcali.com"
+                    className="text-ice-100 hover:text-brand-300"
+                  >
+                    ventas6@videonetcali.com
+                  </a>
+                </div>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>Celular / WhatsApp</span>
+                  <a
+                    href="tel:+573173040506"
+                    className="text-ice-100 hover:text-brand-300"
+                  >
+                    +57 317 304 0506
+                  </a>
+                </div>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>Teléfono</span>
+                  <span className="text-ice-100">
+                    265 5944 Extensión Fija: 127 - Extensión Móvil: 227
+                  </span>
+                </div>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>Ciudad</span>
+                  <span className="text-ice-100">Bogotá, Colombia</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Web</span>
+                  <a
+                    href="https://www.videonetcali.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ice-100 hover:text-brand-300"
+                  >
+                    www.videonetcali.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -286,6 +310,41 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/60">
+            <Image
+              src="/media/meeting-room.jpg"
+              alt="Reunión con soluciones audiovisuales colaborativas"
+              width={1800}
+              height={1200}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
+          </div>
+          <div className="grid gap-4">
+            <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
+              Tecnología aplicada
+            </p>
+            <h2 className="font-display text-3xl">
+              Soluciones audiovisuales que elevan la experiencia
+            </h2>
+            <p className="text-ice-200">
+              Diseñamos entornos colaborativos con integración AV, conectividad
+              confiable y soporte continuo para asegurar resultados medibles.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {techHighlights.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-ice-200"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
