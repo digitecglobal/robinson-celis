@@ -169,7 +169,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             aria-label="Escribir por WhatsApp"
-            className="inline-flex items-center rounded-full bg-accent-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-accent-600"
+            className="inline-flex items-center rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-brand-300"
           >
             WhatsApp
           </a>
@@ -531,7 +531,7 @@ export default function Home() {
               href={whatsappLink}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-accent-600"
+              className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-brand-300"
             >
               Hablar con Robinson
             </a>
@@ -580,9 +580,16 @@ export default function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="Abrir WhatsApp"
-        className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent-500 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-[0_20px_50px_rgba(226,75,59,0.45)] transition hover:bg-accent-600 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8"
+        className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-500 text-white shadow-[0_20px_50px_rgba(47,111,211,0.45)] transition hover:bg-brand-300 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8"
       >
-        WA
+        <span className="sr-only">WhatsApp</span>
+        <svg
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          className="h-6 w-6 fill-current"
+        >
+          <path d="M16.003 2.667c-7.363 0-13.336 5.973-13.336 13.336 0 2.351.616 4.655 1.789 6.689L2.667 29.333l6.821-1.784a13.28 13.28 0 006.515 1.714h.006c7.363 0 13.336-5.973 13.336-13.336S23.366 2.667 16.003 2.667zm7.79 19.315c-.331.934-1.642 1.777-2.675 1.995-.708.149-1.635.267-4.742-.999-3.972-1.632-6.52-5.635-6.714-5.894-.192-.26-1.615-2.147-1.615-4.096 0-1.95 1.019-2.91 1.38-3.31.36-.4.786-.5 1.047-.5.26 0 .52.003.747.015.24.012.56-.092.878.668.331.787 1.128 2.72 1.23 2.917.1.2.167.434.033.701-.133.268-.2.434-.4.668-.2.234-.42.522-.6.7-.2.2-.408.417-.175.817.234.4 1.04 1.714 2.232 2.774 1.531 1.364 2.82 1.789 3.22 1.987.4.2.634.167.868-.1.234-.268 1.002-1.168 1.27-1.568.268-.4.534-.334.901-.2.367.133 2.336 1.102 2.736 1.303.4.2.667.3.767.467.1.167.1.967-.231 1.901z" />
+        </svg>
       </a>
 
       <footer className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6 sm:pb-10">
