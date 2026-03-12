@@ -176,24 +176,6 @@ export default function Home() {
         </div>
       </header>
 
-      <nav className="mx-auto flex w-full max-w-6xl gap-2 overflow-x-auto px-4 pb-4 text-[10px] uppercase tracking-[0.25em] text-ice-200 sm:px-6 sm:text-xs md:hidden">
-        {[
-          { href: "#soluciones", label: "Soluciones" },
-          { href: "#galeria", label: "Galería" },
-          { href: "#servicios", label: "Servicios" },
-          { href: "#productos", label: "Productos" },
-          { href: "#contacto", label: "Contacto" },
-        ].map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-3 py-2 text-ice-100 sm:px-4"
-          >
-            {item.label}
-          </a>
-        ))}
-      </nav>
-
       <main
         id="contenido"
         className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 sm:gap-20 sm:px-6 sm:pb-20"
