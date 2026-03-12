@@ -116,7 +116,7 @@ export default function Home() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(47,111,211,0.35),transparent_55%),radial-gradient(circle_at_80%_15%,rgba(226,75,59,0.25),transparent_45%),linear-gradient(120deg,rgba(255,255,255,0.06),transparent_40%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_40%,transparent_60%)] opacity-60" />
 
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 pb-6 pt-8">
+      <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 pb-4 pt-6 sm:px-6 sm:pb-6 sm:pt-8">
         <div className="flex items-center">
           <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-ink-800/70 px-4 py-2 shadow-[0_20px_60px_rgba(8,14,36,0.45)]">
             <Image
@@ -133,7 +133,7 @@ export default function Home() {
               width={461}
               height={112}
               priority
-              className="h-8 w-auto max-w-[220px] object-contain sm:h-9 sm:max-w-[260px]"
+              className="h-7 w-auto max-w-[200px] object-contain sm:h-9 sm:max-w-[260px]"
             />
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
       </header>
 
-      <nav className="mx-auto flex w-full max-w-6xl gap-3 overflow-x-auto px-6 pb-4 text-xs uppercase tracking-[0.3em] text-ice-200 md:hidden">
+      <nav className="mx-auto flex w-full max-w-6xl gap-2 overflow-x-auto px-4 pb-4 text-[10px] uppercase tracking-[0.25em] text-ice-200 sm:px-6 sm:text-xs md:hidden">
         {[
           { href: "#soluciones", label: "Soluciones" },
           { href: "#galeria", label: "Galería" },
@@ -187,7 +187,7 @@ export default function Home() {
           <a
             key={item.href}
             href={item.href}
-            className="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 text-ice-100"
+            className="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-3 py-2 text-ice-100 sm:px-4"
           >
             {item.label}
           </a>
@@ -196,18 +196,18 @@ export default function Home() {
 
       <main
         id="contenido"
-        className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-20"
+        className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 sm:gap-20 sm:px-6 sm:pb-20"
       >
         <section className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="grid gap-6">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-ice-200">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-ice-200 sm:text-xs sm:tracking-[0.3em]">
               Tus ideas no tienen límite
             </div>
             <div className="grid gap-4">
-              <h1 className="font-display text-4xl leading-tight tracking-tight text-shadow-glow sm:text-5xl">
+              <h1 className="font-display text-3xl leading-tight tracking-tight text-shadow-glow sm:text-5xl">
                 Robinson Celis
               </h1>
-              <p className="text-lg text-ice-200">
+              <p className="text-base text-ice-200 sm:text-lg">
                 Consultor de Soluciones Tecnológicas en VIDEONET. Aliado
                 estratégico para integradores AV, empresas y organizaciones que
                 buscan experiencias audiovisuales confiables.
@@ -239,13 +239,13 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Agendar asesoría por WhatsApp"
-                className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-brand-300"
+                className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-brand-300 sm:tracking-[0.25em]"
               >
                 Agendar asesoría
               </a>
               <a
                 href="#soluciones"
-                className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:border-brand-300"
+                className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-brand-300 sm:tracking-[0.25em]"
               >
                 Ver soluciones
               </a>
@@ -260,7 +260,7 @@ export default function Home() {
                 width={1600}
                 height={900}
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="h-full w-full object-cover"
+                className="h-60 w-full object-cover sm:h-72 lg:h-full"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
@@ -277,7 +277,7 @@ export default function Home() {
                 <p className="font-display text-xl">VIDEONET</p>
               </div>
               <div className="grid gap-3 text-sm text-ice-200">
-                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-2 sm:flex-row sm:items-center sm:justify-between">
                   <span>Correo</span>
                   <a
                     href="mailto:ventas6@videonetcali.com"
@@ -286,7 +286,7 @@ export default function Home() {
                     ventas6@videonetcali.com
                   </a>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-2 sm:flex-row sm:items-center sm:justify-between">
                   <span>Celular / WhatsApp</span>
                   <a
                     href="tel:+573173040506"
@@ -295,17 +295,17 @@ export default function Home() {
                     +57 317 304 0506
                   </a>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-2 sm:flex-row sm:items-center sm:justify-between">
                   <span>Teléfono</span>
                   <span className="text-ice-100">
                     265 5944 Extensión Fija: 127 - Extensión Móvil: 227
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-2 sm:flex-row sm:items-center sm:justify-between">
                   <span>Ciudad</span>
                   <span className="text-ice-100">Bogotá, Colombia</span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <span>Web</span>
                   <a
                     href="https://www.videonetcali.com"
@@ -420,7 +420,7 @@ export default function Home() {
               width={1600}
               height={900}
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="h-full w-full object-cover"
+              className="h-56 w-full object-cover sm:h-72 lg:h-full"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
           </div>
@@ -439,7 +439,7 @@ export default function Home() {
               {techHighlights.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-ice-200"
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-ice-200 sm:text-xs sm:tracking-[0.3em]"
                 >
                   {item}
                 </span>
@@ -461,7 +461,7 @@ export default function Home() {
             {productLines.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-white/10 bg-ink-900/70 px-4 py-2 text-sm text-ice-100"
+                className="rounded-full border border-white/10 bg-ink-900/70 px-4 py-2 text-xs text-ice-100 sm:text-sm"
               >
                 {item}
               </span>
@@ -470,7 +470,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-3">
             <a
               href="#contacto"
-              className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:border-brand-300"
+              className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-brand-300 sm:tracking-[0.25em]"
             >
               Solicitar catálogo
             </a>
@@ -598,13 +598,13 @@ export default function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="Abrir WhatsApp"
-        className="fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent-500 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-[0_20px_50px_rgba(226,75,59,0.45)] transition hover:bg-accent-600 md:bottom-8 md:right-8"
+        className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent-500 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-[0_20px_50px_rgba(226,75,59,0.45)] transition hover:bg-accent-600 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8"
       >
         WA
       </a>
 
-      <footer className="mx-auto w-full max-w-6xl px-6 pb-10">
-        <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.3em] text-ice-400 md:flex-row md:items-center md:justify-between">
+      <footer className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6 sm:pb-10">
+        <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.25em] text-ice-400 sm:text-xs sm:tracking-[0.3em] md:flex-row md:items-center md:justify-between">
           <span>VIDEONET Colombia</span>
           <span>Soluciones audiovisuales profesionales</span>
         </div>
