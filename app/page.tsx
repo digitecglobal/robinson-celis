@@ -77,8 +77,8 @@ export default function Home() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_40%,transparent_60%)] opacity-60" />
 
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 pb-6 pt-8">
-        <div className="flex items-center gap-3">
-          <div className="rounded-2xl border border-white/10 bg-ink-800/70 p-2">
+        <div className="flex items-center">
+          <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-ink-800/70 px-4 py-2 shadow-[0_20px_60px_rgba(8,14,36,0.45)]">
             <Image
               src="/media/logo.png"
               alt="Logo VIDEONET"
@@ -87,14 +87,14 @@ export default function Home() {
               priority
               className="h-10 w-10 object-contain"
             />
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
-              VIDEONET
-            </p>
-            <p className="font-display text-sm uppercase tracking-[0.28em] text-ice-100">
-              Soluciones AV
-            </p>
+            <Image
+              src="/media/name_slogan.png"
+              alt="VIDEONET - Tus ideas no tienen límite"
+              width={461}
+              height={112}
+              priority
+              className="h-8 w-auto max-w-[220px] object-contain sm:h-9 sm:max-w-[260px]"
+            />
           </div>
         </div>
         <nav className="hidden items-center gap-6 text-sm text-ice-200 md:flex">
@@ -184,22 +184,11 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4 rounded-3xl border border-white/10 bg-ink-900/75 p-6 shadow-[0_40px_120px_rgba(8,14,36,0.6)]">
-            <div className="rounded-2xl border border-white/10 bg-ink-800/70 p-4">
-              <Image
-                src="/media/name_slogan.png"
-                alt="VIDEONET - Tus ideas no tienen límite"
-                width={461}
-                height={112}
-                className="h-auto w-full object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
-                  Contacto directo
-                </p>
-                <p className="font-display text-xl">VIDEONET</p>
-              </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
+                Contacto directo
+              </p>
+              <p className="font-display text-xl">VIDEONET</p>
             </div>
             <div className="grid gap-3 text-sm text-ice-200">
               <div className="flex items-center justify-between border-b border-white/10 pb-2">
