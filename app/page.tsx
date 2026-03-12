@@ -169,7 +169,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             aria-label="Escribir por WhatsApp"
-            className="inline-flex items-center rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-brand-300"
+            className="inline-flex items-center rounded-full bg-[#25D366] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[#1ebe57]"
           >
             WhatsApp
           </a>
@@ -221,7 +221,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Agendar asesoría por WhatsApp"
-                className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-brand-300 sm:tracking-[0.25em]"
+                className="inline-flex items-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#1ebe57] sm:tracking-[0.25em]"
               >
                 Agendar asesoría
               </a>
@@ -531,7 +531,7 @@ export default function Home() {
               href={whatsappLink}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-brand-300"
+              className="inline-flex items-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-[#1ebe57]"
             >
               Hablar con Robinson
             </a>
@@ -580,7 +580,7 @@ export default function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="Abrir WhatsApp"
-        className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-500 text-white shadow-[0_20px_50px_rgba(47,111,211,0.45)] transition hover:bg-brand-300 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8"
+        className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_20px_50px_rgba(37,211,102,0.45)] transition hover:bg-[#1ebe57] sm:bottom-6 sm:right-6 md:bottom-8 md:right-8"
       >
         <span className="sr-only">WhatsApp</span>
         <svg
