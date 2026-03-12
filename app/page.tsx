@@ -107,6 +107,12 @@ const galleryItems = [
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
+      <a
+        href="#contenido"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-xs focus:font-semibold focus:uppercase focus:tracking-[0.3em] focus:text-white"
+      >
+        Saltar al contenido
+      </a>
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(47,111,211,0.35),transparent_55%),radial-gradient(circle_at_80%_15%,rgba(226,75,59,0.25),transparent_45%),linear-gradient(120deg,rgba(255,255,255,0.06),transparent_40%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_40%,transparent_60%)] opacity-60" />
 
@@ -131,9 +137,15 @@ export default function Home() {
             />
           </div>
         </div>
-        <nav className="hidden items-center gap-6 text-sm text-ice-200 md:flex">
+        <nav
+          className="hidden items-center gap-6 text-sm text-ice-200 md:flex"
+          aria-label="Navegación principal"
+        >
           <a href="#soluciones" className="transition hover:text-white">
             Soluciones
+          </a>
+          <a href="#galeria" className="transition hover:text-white">
+            Galería
           </a>
           <a href="#servicios" className="transition hover:text-white">
             Servicios
@@ -156,6 +168,7 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noreferrer"
+            aria-label="Escribir por WhatsApp"
             className="inline-flex items-center rounded-full bg-accent-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-accent-600"
           >
             WhatsApp
@@ -163,7 +176,28 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-20">
+      <nav className="mx-auto flex w-full max-w-6xl gap-3 overflow-x-auto px-6 pb-4 text-xs uppercase tracking-[0.3em] text-ice-200 md:hidden">
+        {[
+          { href: "#soluciones", label: "Soluciones" },
+          { href: "#galeria", label: "Galería" },
+          { href: "#servicios", label: "Servicios" },
+          { href: "#productos", label: "Productos" },
+          { href: "#contacto", label: "Contacto" },
+        ].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 text-ice-100"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <main
+        id="contenido"
+        className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-20"
+      >
         <section className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="grid gap-6">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-ice-200">
@@ -204,6 +238,7 @@ export default function Home() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Agendar asesoría por WhatsApp"
                 className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-brand-300"
               >
                 Agendar asesoría
@@ -286,7 +321,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="soluciones" className="grid gap-8">
+        <section id="soluciones" className="grid gap-8 scroll-mt-24">
           <div className="grid gap-3">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
               Soluciones
@@ -315,7 +350,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="grid gap-8">
+        <section id="galeria" className="grid gap-8 scroll-mt-24">
           <div className="grid gap-3">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
               Galería
@@ -340,7 +375,7 @@ export default function Home() {
                   width={1600}
                   height={1000}
                   sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-56 w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 sm:h-64"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                 <div className="absolute bottom-3 left-4 right-4 text-sm text-ice-100 opacity-0 transition duration-500 group-hover:opacity-100">
@@ -351,7 +386,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="servicios" className="grid gap-8">
+        <section id="servicios" className="grid gap-8 scroll-mt-24">
           <div className="grid gap-3">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
               Servicios
@@ -413,7 +448,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="productos" className="grid gap-8">
+        <section id="productos" className="grid gap-8 scroll-mt-24">
           <div className="grid gap-3">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
               Productos
@@ -431,6 +466,14 @@ export default function Home() {
                 {item}
               </span>
             ))}
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#contacto"
+              className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:border-brand-300"
+            >
+              Solicitar catálogo
+            </a>
           </div>
         </section>
 
@@ -519,7 +562,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contacto" className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <section id="contacto" className="grid gap-8 scroll-mt-24 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="grid gap-4">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
               Contacto
@@ -549,6 +592,16 @@ export default function Home() {
           <ContactForm />
         </section>
       </main>
+
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Abrir WhatsApp"
+        className="fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent-500 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-[0_20px_50px_rgba(226,75,59,0.45)] transition hover:bg-accent-600 md:bottom-8 md:right-8"
+      >
+        WA
+      </a>
 
       <footer className="mx-auto w-full max-w-6xl px-6 pb-10">
         <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.3em] text-ice-400 md:flex-row md:items-center md:justify-between">

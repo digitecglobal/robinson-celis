@@ -78,6 +78,8 @@ export default function ContactForm() {
             onChange={updateField}
             placeholder="Nombre y apellido"
             required
+            maxLength={80}
+            autoComplete="name"
             className="h-12 rounded-2xl border border-white/10 bg-ink-800/80 px-4 text-base text-white outline-none transition focus:border-brand-300"
           />
         </label>
@@ -90,6 +92,8 @@ export default function ContactForm() {
             onChange={updateField}
             placeholder="correo@empresa.com"
             required
+            maxLength={120}
+            autoComplete="email"
             className="h-12 rounded-2xl border border-white/10 bg-ink-800/80 px-4 text-base text-white outline-none transition focus:border-brand-300"
           />
         </label>
@@ -103,6 +107,8 @@ export default function ContactForm() {
             value={form.company}
             onChange={updateField}
             placeholder="Nombre de la empresa"
+            maxLength={120}
+            autoComplete="organization"
             className="h-12 rounded-2xl border border-white/10 bg-ink-800/80 px-4 text-base text-white outline-none transition focus:border-brand-300"
           />
         </label>
@@ -112,7 +118,9 @@ export default function ContactForm() {
             name="phone"
             value={form.phone}
             onChange={updateField}
-          placeholder="Celular, WhatsApp o PBX"
+            placeholder="Celular, WhatsApp o PBX"
+            maxLength={40}
+            autoComplete="tel"
             className="h-12 rounded-2xl border border-white/10 bg-ink-800/80 px-4 text-base text-white outline-none transition focus:border-brand-300"
           />
         </label>
@@ -127,6 +135,7 @@ export default function ContactForm() {
           placeholder="Cuéntanos brevemente el proyecto"
           required
           rows={5}
+          maxLength={1200}
           className="rounded-2xl border border-white/10 bg-ink-800/80 px-4 py-3 text-base text-white outline-none transition focus:border-brand-300"
         />
       </label>
@@ -139,7 +148,7 @@ export default function ContactForm() {
         >
           {status === "loading" ? "Enviando..." : "Enviar mensaje"}
         </button>
-        <div className="text-xs text-ice-400">
+        <div className="text-xs text-ice-400" aria-live="polite">
           {status === "success" && "Mensaje enviado. Te contactaremos pronto."}
           {status === "error" && error}
           {status === "idle" && "Respondemos en menos de 24 horas hábiles."}
