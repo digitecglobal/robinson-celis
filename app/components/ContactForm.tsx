@@ -107,12 +107,12 @@ export default function ContactForm() {
           />
         </label>
         <label className="grid gap-2 text-sm text-ice-200">
-          Telefono
+          Teléfono
           <input
             name="phone"
             value={form.phone}
             onChange={updateField}
-            placeholder="Celular o PBX"
+          placeholder="Celular, WhatsApp o PBX"
             className="h-12 rounded-2xl border border-white/10 bg-ink-800/80 px-4 text-base text-white outline-none transition focus:border-brand-300"
           />
         </label>
@@ -124,7 +124,7 @@ export default function ContactForm() {
           name="message"
           value={form.message}
           onChange={updateField}
-          placeholder="Cuentanos brevemente el proyecto"
+          placeholder="Cuéntanos brevemente el proyecto"
           required
           rows={5}
           className="rounded-2xl border border-white/10 bg-ink-800/80 px-4 py-3 text-base text-white outline-none transition focus:border-brand-300"
@@ -142,7 +142,7 @@ export default function ContactForm() {
         <div className="text-xs text-ice-400">
           {status === "success" && "Mensaje enviado. Te contactaremos pronto."}
           {status === "error" && error}
-          {status === "idle" && "Respondemos en menos de 24 horas habiles."}
+          {status === "idle" && "Respondemos en menos de 24 horas hábiles."}
         </div>
       </div>
     </form>

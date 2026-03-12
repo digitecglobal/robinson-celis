@@ -1,15 +1,16 @@
+import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
-const whatsappNumber = "573175306906";
+const whatsappNumber = "573173040506";
 const whatsappMessage =
-  "Hola Robinson, quiero una asesoria para un proyecto audiovisual.";
+  "Hola Robinson, quiero una asesoría en soluciones tecnológicas.";
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   whatsappMessage
 )}`;
 
 const solutions = [
   "Audio y videoconferencia",
-  "Senalizacion digital",
+  "Señalización digital",
   "Streaming y broadcast",
   "Monitores interactivos",
   "Soluciones de videowall",
@@ -19,24 +20,24 @@ const solutions = [
 
 const services = [
   {
-    title: "Asesoria experta",
+    title: "Asesoría experta",
     description:
-      "Acompanamiento desde el diagnostico hasta la puesta en marcha del proyecto AV.",
+      "Acompañamiento desde el diagnóstico hasta la puesta en marcha del proyecto AV.",
   },
   {
-    title: "Distribucion mayorista",
+    title: "Distribución mayorista",
     description:
       "Portafolio integral con soluciones y conectividad profesional para integradores.",
   },
   {
-    title: "Soporte tecnico",
+    title: "Soporte técnico",
     description:
-      "Instalacion, capacitacion y postventa con garantia robusta y respuesta rapida.",
+      "Instalación, capacitación y postventa con garantía robusta y respuesta rápida.",
   },
   {
     title: "Proyectos a la medida",
     description:
-      "Soluciones personalizadas segun el tipo de espacio, uso y presupuesto.",
+      "Soluciones personalizadas según el tipo de espacio, uso y presupuesto.",
   },
 ];
 
@@ -44,40 +45,28 @@ const productLines = [
   "Adaptadores y conectores",
   "Cables profesionales",
   "Convertidores y repetidores",
-  "Distribuidores y splitter de senal",
-  "Extensores de senal",
+  "Distribuidores y splitter de señal",
+  "Extensores de señal",
   "Matrices de video y audio",
-  "Switch de senal",
+  "Switch de señal",
   "Streaming y capturadoras",
   "Soportes y montaje",
-  "Telones de proyeccion",
+  "Telones de proyección",
   "Videoconferencia",
 ];
 
 const markets = [
   "Corporativo",
   "Educativo",
-  "Retail y hoteleria",
-  "Sector publico",
-];
-
-const brands = [
-  "SolidView",
-  "Lulova",
-  "MaxHub",
-  "Aten",
-  "Relacart",
-  "RGBLink",
-  "TDG Audio",
-  "LINDY",
-  "Mersive",
+  "Retail y hotelería",
+  "Sector público",
 ];
 
 const values = [
-  "Etica profesional",
+  "Ética profesional",
   "Compromiso",
   "Trabajo en equipo",
-  "Innovacion",
+  "Innovación",
   "Respeto",
 ];
 
@@ -89,13 +78,19 @@ export default function Home() {
 
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 pb-6 pt-8">
         <div className="flex items-center gap-3">
-          <div className="relative h-12 w-12 rounded-2xl border border-white/10 bg-ink-800/70">
-            <span className="absolute left-4 top-2 h-5 w-5 rotate-45 rounded-md bg-brand-500 shadow-[0_10px_30px_rgba(47,111,211,0.35)]" />
-            <span className="absolute bottom-2 left-2 h-4 w-8 border-b-4 border-r-4 border-accent-500 shadow-[0_10px_20px_rgba(226,75,59,0.4)]" />
+          <div className="rounded-2xl border border-white/10 bg-ink-800/70 p-2">
+            <Image
+              src="/media/logo.png"
+              alt="Logo VIDEONET"
+              width={52}
+              height={52}
+              priority
+              className="h-10 w-10 object-contain"
+            />
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
-              VideoNet
+              VIDEONET
             </p>
             <p className="font-display text-sm uppercase tracking-[0.28em] text-ice-100">
               Soluciones AV
@@ -111,9 +106,6 @@ export default function Home() {
           </a>
           <a href="#productos" className="transition hover:text-white">
             Productos
-          </a>
-          <a href="#marcas" className="transition hover:text-white">
-            Marcas
           </a>
           <a href="#contacto" className="transition hover:text-white">
             Contacto
@@ -141,15 +133,15 @@ export default function Home() {
         <section className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="grid gap-6">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-ice-200">
-              Tus ideas no tienen limite
+              Tus ideas no tienen límite
             </div>
             <div className="grid gap-4">
               <h1 className="font-display text-4xl leading-tight tracking-tight text-shadow-glow sm:text-5xl">
                 Robinson Celis
               </h1>
               <p className="text-lg text-ice-200">
-                Director de soluciones tecnologicas en VideoNet. Aliado
-                estrategico para integradores AV, empresas y organizaciones que
+                Consultor de Soluciones Tecnológicas en VIDEONET. Aliado
+                estratégico para integradores AV, empresas y organizaciones que
                 buscan experiencias audiovisuales confiables.
               </p>
             </div>
@@ -159,8 +151,8 @@ export default function Home() {
                   Propuesta
                 </p>
                 <p className="mt-2 text-sm text-ice-100">
-                  Soluciones AV, conectividad y distribucion mayorista con
-                  soporte tecnico especializado.
+                  Soluciones AV, conectividad y distribución mayorista con
+                  soporte técnico especializado.
                 </p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-ink-900/70 p-4">
@@ -168,8 +160,8 @@ export default function Home() {
                   Cobertura
                 </p>
                 <p className="mt-2 text-sm text-ice-100">
-                  Sectores corporativo, educativo, retail, hoteleria y sector
-                  publico.
+                  Sectores corporativo, educativo, retail, hotelería y sector
+                  público.
                 </p>
               </div>
             </div>
@@ -180,7 +172,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-brand-300"
               >
-                Agendar asesoria
+                Agendar asesoría
               </a>
               <a
                 href="#soluciones"
@@ -192,55 +184,61 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4 rounded-3xl border border-white/10 bg-ink-900/75 p-6 shadow-[0_40px_120px_rgba(8,14,36,0.6)]">
+            <div className="rounded-2xl border border-white/10 bg-ink-800/70 p-4">
+              <Image
+                src="/media/name_slogan.png"
+                alt="VIDEONET - Tus ideas no tienen límite"
+                width={461}
+                height={112}
+                className="h-auto w-full object-contain"
+              />
+            </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
                   Contacto directo
                 </p>
-                <p className="font-display text-xl">VideoNet Colombia</p>
+                <p className="font-display text-xl">VIDEONET</p>
               </div>
-              <span className="rounded-full bg-accent-500/20 px-3 py-1 text-xs uppercase tracking-[0.3em] text-accent-500">
-                SolidView
-              </span>
             </div>
             <div className="grid gap-3 text-sm text-ice-200">
               <div className="flex items-center justify-between border-b border-white/10 pb-2">
                 <span>Correo</span>
                 <a
-                  href="mailto:ventas@videonetcali.com"
+                  href="mailto:ventas6@videonetcali.com"
                   className="text-ice-100 hover:text-brand-300"
                 >
-                  ventas@videonetcali.com
+                  ventas6@videonetcali.com
                 </a>
               </div>
               <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>Celular</span>
+                <span>Celular / WhatsApp</span>
                 <a
-                  href="tel:+573175306906"
+                  href="tel:+573173040506"
                   className="text-ice-100 hover:text-brand-300"
                 >
-                  +57 317 530 6906
+                  +57 317 304 0506
                 </a>
               </div>
               <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>PBX</span>
+                <span>Teléfono</span>
                 <span className="text-ice-100">
-                  (1) 265 5944 Ext. Fija 127 / Ext. Movil 227
+                  265 5944 Extensión Fija: 127 - Extensión Móvil: 227
                 </span>
               </div>
               <div className="flex items-center justify-between border-b border-white/10 pb-2">
                 <span>Ciudad</span>
-                <span className="text-ice-100">Bogota - Colombia</span>
+                <span className="text-ice-100">Bogotá, Colombia</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Web</span>
                 <a
-                  href="https://videonet.com.co"
+                  href="https://www.videonetcali.com"
                   target="_blank"
                   rel="noreferrer"
                   className="text-ice-100 hover:text-brand-300"
                 >
-                  videonet.com.co
+                  www.videonetcali.com
                 </a>
               </div>
             </div>
@@ -253,7 +251,7 @@ export default function Home() {
               Soluciones
             </p>
             <h2 className="font-display text-3xl">
-              Audio, video, senalizacion digital y automatizacion
+              Audio, video, señalización digital y automatización
             </h2>
             <p className="max-w-2xl text-ice-200">
               Portafolio integral en soluciones audiovisuales profesionales para
@@ -268,7 +266,7 @@ export default function Home() {
               >
                 <p className="font-display text-lg">{item}</p>
                 <p className="mt-2 text-sm text-ice-400">
-                  Soluciones disenadas para espacios con alto impacto y
+                  Soluciones diseñadas para espacios con alto impacto y
                   conectividad confiable.
                 </p>
               </div>
@@ -282,7 +280,7 @@ export default function Home() {
               Servicios
             </p>
             <h2 className="font-display text-3xl">
-              Acompanamiento estrategico y soporte especializado
+              Acompañamiento estratégico y soporte especializado
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -308,7 +306,7 @@ export default function Home() {
               Productos
             </p>
             <h2 className="font-display text-3xl">
-              Lineas de producto para integracion AV
+              Líneas de producto para integración AV
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -323,30 +321,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="marcas" className="grid gap-8">
-          <div className="grid gap-3">
-            <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
-              Marcas
-            </p>
-            <h2 className="font-display text-3xl">
-              Partners internacionales y marcas propias
-            </h2>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {brands.map((brand) => (
-              <div
-                key={brand}
-                className="rounded-2xl border border-white/10 bg-ink-900/70 p-5 text-center"
-              >
-                <p className="font-display text-lg text-white">{brand}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-ice-400">
-                  Partner AV
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="grid gap-6 rounded-3xl border border-white/10 bg-ink-900/70 p-8">
             <div>
@@ -354,11 +328,11 @@ export default function Home() {
                 Diferencial
               </p>
               <h3 className="font-display text-2xl">
-                Soluciones personalizadas, garantia robusta y soporte experto
+                Soluciones personalizadas, garantía robusta y soporte experto
               </h3>
               <p className="mt-3 text-ice-200">
-                VideoNet impulsa proyectos integrales con un portafolio amplio en
-                tecnologia AV, conectividad y comunicacion profesional.
+                VIDEONET impulsa proyectos integrales con un portafolio amplio en
+                tecnología AV, conectividad y comunicación profesional.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -374,13 +348,13 @@ export default function Home() {
           </div>
           <div className="grid gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-brand-500/20 via-ink-900/70 to-ink-900/40 p-8">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-200">
-              Proposito
+              Propósito
             </p>
             <h3 className="font-display text-2xl">
-              Aliado estrategico de integradores AV en Colombia
+              Aliado estratégico de integradores AV en Colombia
             </h3>
             <p className="text-sm text-ice-200">
-              Distribucion mayorista con marcas internacionales, soporte tecnico
+              Distribución mayorista con marcas internacionales, soporte técnico
               especializado y proyectos a la medida.
             </p>
             <div className="grid gap-3">
@@ -404,13 +378,13 @@ export default function Home() {
         <section className="grid gap-6 rounded-3xl border border-white/10 bg-ink-900/70 p-8">
           <div className="grid gap-2">
             <p className="text-xs uppercase tracking-[0.4em] text-ice-400">
-              Vision 2030
+              Visión 2030
             </p>
             <h3 className="font-display text-2xl">
-              Ecosistema de referencia en transformacion digital de espacios
+              Ecosistema de referencia en transformación digital de espacios
             </h3>
             <p className="text-ice-200">
-              VideoNet trabaja para impulsar soluciones AV intuitivas y
+              VIDEONET trabaja para impulsar soluciones AV intuitivas y
               conectadas que faciliten experiencias inmersivas y productivas.
             </p>
           </div>
@@ -438,24 +412,24 @@ export default function Home() {
               Contacto
             </p>
             <h2 className="font-display text-3xl">
-              Conversemos sobre tu proximo proyecto AV
+              Conversemos sobre tu próximo proyecto AV
             </h2>
             <p className="text-ice-200">
               Comparte los detalles del proyecto y te enviaremos una respuesta
-              con soluciones, tiempos y recomendaciones tecnicas.
+              con soluciones, tiempos y recomendaciones técnicas.
             </p>
             <div className="grid gap-3 text-sm text-ice-200">
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-brand-500" />
-                <span>ventas@videonetcali.com</span>
+                <span>ventas6@videonetcali.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-brand-500" />
-                <span>+57 317 530 6906</span>
+                <span>+57 317 304 0506</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-brand-500" />
-                <span>PBX (1) 265 5944 Ext. Fija 127 / Ext. Movil 227</span>
+                <span>Teléfono 265 5944 Extensión Fija: 127 - Extensión Móvil: 227</span>
               </div>
             </div>
           </div>
@@ -465,7 +439,7 @@ export default function Home() {
 
       <footer className="mx-auto w-full max-w-6xl px-6 pb-10">
         <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.3em] text-ice-400 md:flex-row md:items-center md:justify-between">
-          <span>VideoNet Colombia</span>
+          <span>VIDEONET Colombia</span>
           <span>Soluciones audiovisuales profesionales</span>
         </div>
       </footer>
