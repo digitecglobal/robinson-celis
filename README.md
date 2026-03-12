@@ -18,6 +18,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Contact Form
+
+The contact form posts to `/api/contact` and requires SMTP credentials.
+
+Create a `.env.local` based on `.env.example` and fill in:
+
+```bash
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM="VideoNet <ventas@videonetcali.com>"
+SMTP_TO=ventas@videonetcali.com
+ALLOWED_ORIGINS=https://tudominio.com
+```
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink-950: #0a1026;
+  --color-ink-900: #0f1935;
+  --color-ink-800: #142349;
+  --color-ink-700: #1b2e5f;
+  --color-ink-600: #233a75;
+  --color-ice-50: #f3f6ff;
+  --color-ice-100: #e9efff;
+  --color-ice-200: #d2ddf4;
+  --color-ice-400: #a2b2cf;
+  --color-ice-500: #7e8fb3;
+  --color-brand-500: #2f6fd3;
+  --color-brand-300: #7aa8ff;
+  --color-accent-500: #e24b3b;
+  --color-accent-600: #c23a2e;
+  --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility text-shadow-glow {
+  text-shadow: 0 0 30px rgba(47, 111, 211, 0.35);
+}
+
+@layer base {
+  body {
+    @apply bg-ink-950 text-ice-50 font-sans;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  ::selection {
+    background: rgba(47, 111, 211, 0.45);
+    color: #fff;
+  }
 }
