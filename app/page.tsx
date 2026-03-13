@@ -8,6 +8,16 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   whatsappMessage
 )}`;
 
+const companyLinks = {
+  site: "https://videonet.com.co/",
+  about: "https://videonet.com.co/nosotros/",
+  solutions: "https://videonet.com.co/soluciones/",
+  markets: "https://videonet.com.co/mercados/",
+  blog: "https://videonet.com.co/blog/",
+  contact: "https://videonet.com.co/contacto/",
+  catalog: "https://videonet.com.co/tienda/",
+};
+
 const solutions = [
   "Audio y videoconferencia",
   "Señalización digital",
@@ -194,6 +204,18 @@ export default function Home() {
                 estratégico para integradores AV, empresas y organizaciones que
                 buscan experiencias audiovisuales confiables.
               </p>
+              <p className="text-sm text-ice-200">
+                Conoce la empresa en{" "}
+                <a
+                  href={companyLinks.site}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-ice-100 transition hover:text-brand-300"
+                >
+                  videonet.com.co
+                </a>
+                .
+              </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-white/10 bg-ink-900/70 p-4">
@@ -315,6 +337,16 @@ export default function Home() {
               Portafolio integral en soluciones audiovisuales profesionales para
               proyectos corporativos, educativos y de entretenimiento.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={companyLinks.solutions}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full border border-white/15 px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white transition hover:border-brand-300"
+              >
+                Explorar soluciones en VIDEONET
+              </a>
+            </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {solutions.map((item) => (
@@ -456,6 +488,14 @@ export default function Home() {
             >
               Solicitar catálogo
             </a>
+            <a
+              href={companyLinks.catalog}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/20 sm:tracking-[0.25em]"
+            >
+              Ver catálogo en VIDEONET
+            </a>
           </div>
         </section>
 
@@ -525,6 +565,27 @@ export default function Home() {
               VIDEONET trabaja para impulsar soluciones AV intuitivas y
               conectadas que faciliten experiencias inmersivas y productivas.
             </p>
+            <p className="text-sm text-ice-200">
+              Descubre más en{" "}
+              <a
+                href={companyLinks.about}
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-ice-100 transition hover:text-brand-300"
+              >
+                Nosotros
+              </a>{" "}
+              y{" "}
+              <a
+                href={companyLinks.markets}
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-ice-100 transition hover:text-brand-300"
+              >
+                Mercados
+              </a>
+              .
+            </p>
           </div>
           <div className="flex flex-wrap gap-3">
             <a
@@ -555,6 +616,18 @@ export default function Home() {
             <p className="text-ice-200">
               Comparte los detalles del proyecto y te enviaremos una respuesta
               con soluciones, tiempos y recomendaciones técnicas.
+            </p>
+            <p className="text-sm text-ice-200">
+              También puedes escribir desde la página oficial de{" "}
+              <a
+                href={companyLinks.contact}
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-ice-100 transition hover:text-brand-300"
+              >
+                Contacto de VIDEONET
+              </a>
+              .
             </p>
             <div className="grid gap-3 text-sm text-ice-200">
               <div className="flex items-center gap-3">
@@ -593,9 +666,50 @@ export default function Home() {
       </a>
 
       <footer className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6 sm:pb-10">
-        <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.25em] text-ice-400 sm:text-xs sm:tracking-[0.3em] md:flex-row md:items-center md:justify-between">
+        <div className="grid gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.25em] text-ice-400 sm:text-xs sm:tracking-[0.3em] md:flex md:items-center md:justify-between">
           <span>VIDEONET Colombia</span>
-          <span>Soluciones audiovisuales profesionales</span>
+          <div className="flex flex-wrap gap-3 text-[10px] sm:text-xs">
+            <a
+              href={companyLinks.site}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-ice-100"
+            >
+              Sitio oficial
+            </a>
+            <a
+              href={companyLinks.solutions}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-ice-100"
+            >
+              Soluciones
+            </a>
+            <a
+              href={companyLinks.catalog}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-ice-100"
+            >
+              Catálogo
+            </a>
+            <a
+              href={companyLinks.blog}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-ice-100"
+            >
+              Blog
+            </a>
+            <a
+              href={companyLinks.contact}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-ice-100"
+            >
+              Contacto
+            </a>
+          </div>
         </div>
       </footer>
     </div>
